@@ -15,7 +15,7 @@ MODEL_NAME = "gemini-2.5-flash-lite"
 PROMPTS_FILE = os.path.join("test_cases", "prompts.json")
 RESULTS_FILE = os.path.join("results", "results.json")
 
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY=AIzaSyDlmInmUh-_tWCQiQL9I--TydrR2IB4m-s"))
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 def load_prompts():

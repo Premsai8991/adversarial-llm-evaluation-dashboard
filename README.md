@@ -99,6 +99,9 @@ llm-stress-tester/
 │   └── results.json
 ---
 
+---
+
+
 ## How It Works
 
 1. The user selects a benchmark test or enters a custom prompt.

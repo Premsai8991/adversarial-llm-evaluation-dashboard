@@ -96,7 +96,7 @@ llm-stress-tester/
 │   └── prompts.json
 │
 └── results/
-    └── results.json
+│   └── results.json
 ---
 
 ## How It Works

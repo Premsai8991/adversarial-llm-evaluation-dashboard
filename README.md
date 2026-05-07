@@ -97,7 +97,7 @@ llm-stress-tester/
 │
 └── results/
 │   └── results.json
----
+```
 
 ---
 

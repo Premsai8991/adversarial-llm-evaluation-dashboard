@@ -14,6 +14,7 @@ app = Flask(__name__)
 MODEL_NAME = "gemini-2.5-flash-lite"
 PROMPTS_FILE = os.path.join("test_cases", "prompts.json")
 RESULTS_FILE = os.path.join("results", "results.json")
+os.makedirs("results", exist_ok=True)
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
@@ -219,19 +220,21 @@ def evaluate_response(prompt_data, model_response):
 
 
 def save_result(result):
-    data = []
+    os.makedirs("results", exist_ok=True)
+
+    existing_results = []
 
     if os.path.exists(RESULTS_FILE):
         try:
             with open(RESULTS_FILE, "r", encoding="utf-8") as file:
-                data = json.load(file)
+                existing_results = json.load(file)
         except json.JSONDecodeError:
-            data = []
+            existing_results = []
 
-    data.append(result)
+    existing_results.append(result)
 
     with open(RESULTS_FILE, "w", encoding="utf-8") as file:
-        json.dump(data, file, indent=4)
+        json.dump(existing_results, file, indent=4)
 
 
 def get_summary():

@@ -6,6 +6,12 @@ This project focuses on **LLM evaluation**, not chatbot building. The goal is to
 
 ---
 
+## Live Demo
+
+https://adversarial-llm-evaluation-dashboard.onrender.com/
+
+---
+
 ## Features
 
 - Benchmark test cases for common LLM failure modes
